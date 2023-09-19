@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import Design1 from '../images/Design1.png'
+import Design2 from '../images/Design2.png'
 const style="bg"
 ---
 
@@ -9,21 +10,30 @@ const style="bg"
         border-radius: 1083px;
         background: radial-gradient(50% 50% at 50% 50%, rgba(163, 45, 255, 0.08) 0%, rgba(206, 58, 242, 0.00) 100%);
            }
+           .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+  }
 </style>
 
 <html>
     <body>
-        <div class="bg-[#151414] h-[100vh] w-[100vw]">
+        <div class="bg-[#151414] h-[100vh] w-[100vw] overflow-y-scroll">
             <div class="bg flex flex-col items-center pt-20">
             <h1 class="text-6xl font-bold font-dancingscript text-[#F19324] mb-6">Design Gallery</h1>
             <h1 class="text-lg font-regular text-[#F19324]">Get inspired by the latest design trends and share yours....</h1>
         </div>
-          <div class="flex flex-row flex-wrap">
-            <Image src={Design1} alt="design1" class="w-[20vw]">
-            <Image src={Design1} alt="design1" class="w-[20vw]">
-            <Image src={Design1} alt="design1" class="w-[20vw]">
-            <Image src={Design1} alt="design1" class="w-[20vw]">
-            <Image src={Design1} alt="design1" class="w-[20vw]">
+        <div class="w-full flex flex-row items-center justify-end">
+          <button class="mx-32 mt-4 border-2 border-white rounded-full px-10 py-2 bg-[#F19324] hover:scale-105 text-xm text-white font-bold">Upload</button>
+        </div>
+        
+          <div class="flex flex-row flex-wrap gap-2 items-start justify-start mt-16 px-32 pb-10 grid-container">
+            <Image src={Design1} alt="design1" class="w-[20vw] border-2 border-[#F19324] rounded-xl hover:scale-105" />
+            <Image src={Design1} alt="design1" class="w-[20vw] border-2 border-[#F19324] rounded-xl hover:scale-105" />
+            <Image src={Design1} alt="design1" class="w-[20vw] border-2 border-[#F19324] rounded-xl hover:scale-105" />
+            <Image src={Design1} alt="design1" class="w-[20vw] border-2 border-[#F19324] rounded-xl hover:scale-105" />
+            <Image src={Design1} alt="design1" class="w-[20vw] border-2 border-[#F19324] rounded-xl hover:scale-105" />
           </div>
         </div>
     </body>
