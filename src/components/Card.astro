@@ -1,0 +1,16 @@
+---
+import type { Props } from 'astro';
+const { title } = Astro.props as Props & { title: string
+}
+---
+<style>
+    .bg{
+        border-radius: 20px;
+        background: linear-gradient(104deg, rgba(237, 224, 246, 0.30) 0.88%, rgba(255, 255, 255, 0.00) 100%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+backdrop-filter: blur(20px);
+    }
+</style>
+<div class="w-[30vw] h-[25vh] rounded-2xl border border-1 border-[#F19324] hover:scale-105">
+<h1 class="h-full bg flex flex-col items-center justify-center font-extrabold text-[#F19324] text-3xl">{title}</h1>
+</div>
